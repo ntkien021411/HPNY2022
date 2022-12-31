@@ -46,18 +46,7 @@
         console.log(time.getMonth()+1);
         console.log(time.getFullYear());
         
-        if(time.getDate() === 1 && (time.getMonth()+1) === 1  && time.getFullYear() === 2023){
-          if(hour === '00' && min === '00' && sec === '00'){
-            clearInterval();
-            document.getElementById("trans").click();
-          }
-        }
-       
-
-      }
-      showTime();
-      
-      let day = new Date();
+        let day = new Date();
       const weekday = [
         "Sunday",
         "Monday",
@@ -78,6 +67,19 @@
         "/" +
         day.getFullYear();
       document.getElementById("day").innerHTML = stringDay;
+        
+        if(time.getDate() === 1 && (time.getMonth()+1) === 1  && time.getFullYear() === 2023){
+          if(hour === '00' && min === '00' && sec === '00'){
+            clearInterval();
+            document.getElementById("trans").click();
+          }
+        }
+       
+
+      }
+      showTime();
+      
+      
     </script>
   </body>
 </html>
